@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Import da fonte principal para todo o código*/
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* Regras do Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Italiana", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Set do body padrão */
+body {
+  background-color: #f6f6f6;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
+
+/* Imagens mais fáceis de serem trabalhadas */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Herança de fontes para inputs e buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+

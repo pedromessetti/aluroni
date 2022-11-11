@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+![Logo Aluroni](/src/assets/logo.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Descrição do Projeto
+Aplicação React do cardápio do restaurante Aluroni (restaurante fictício) com preços, nomes, descrição, peso, categoria e porções, além de funcionalidades como filtros, ordenador e buscador. Projeto utilizando o template TypeScript.
+# Funcionalidades
+* ## Filtros
 
-## Available Scripts
+* ## Buscador
 
-In the project directory, you can run:
+* ## Ordenador
 
-### `npm start`
+# Tecnologias Utilizadas
+* ## React 
+    Atualmente é a biblioteca mais utilizada de JavaScript segundo pesquisas. Neste projeto foi utilizado conceitos de Componentização (base do React). Conceito de DRY (Dont Repeat Yoursel), usado para criar componentes reaproveitáveis. Conceito de SRP (Single Responsability Principal), cada função (componentes) do código deve ter uma responsabilidade. Comunicação entre componentes com props. Comunicação com estado interno com Hooks.
+    * #### useState
+    O React só irá renderizar ou atualizar um componente quando avisarmos que algo mudou e fazemos isso usando o Hook `useState()`. O state é uma variável que adiciona um valor a ela, porém sempre que esse "estado da variável" muda, o componente, também muda. O `useState` precisa receber uma variável com o `state` em si e uma função para alterar esse estado (comumemente usamos o `setState`), ao alterar o estado dessa função (setar um novo item) o React entende que o componente mudou e o atualiza. 
+    * ### Importação de imagens como componente
+    Para importar imagens como componente React, deve-se primeiramente utilizar uma imagem em formato `.svg`, o ideal  é que a imagem fique dentro de `src` em uma pasta `assets`. Para utiliza-lá deve-se fazer o import como um ReactComponent no arquivo onde ela será usada através da seguinte linha de código `import { ReactComponent as NomeDaImagem } from 'assets/nomedaimagem.svg'`
+    * ### Absolute Imports
+    Para não importar de formar relativa mas sim absoluta. O Typescript e o Javascript possuem uma forma para importar de forma absoluta, sem a necessidade de colocar vários paths `'../../'`, através do arquivo `tsconfig.json` ou `jsconfig.json`. , entre no arquivo e dentro de `compilerOptions` acrescente a seguinte linha de código:
+            
+            "compilerOptions": {
+                "baseUrl": "src",
+                //continuação do código
+            } 
+    * ### Pacote React Icons
+    Pacote do React que adiciona ícones para serem usados na aplicação, necessita que sejam importados dentro do arquivo que vão ser utilizados. Para instalar, abra o terminal e digite `npm install react-icons`. Para verificar os ícones disponíveis acesse este [link](#https://react-icons.github.io/react-icons)
+* ## TypeScript
+É uma biblioteca para tipar variáveis em JavaScript. Para criar uma aplicação React utilizando o template padrão de typescript, basta digitar no terminal `npx create-react-app nome-do-app --template typescript`
+* ## Biblioteca Classnames
+Essa biblioteca permite concatenar classes CSS utilizando sintaxe de objetos, faz com que seja uma melhor forma de trabalhar com css modules sem precisar fazer a concatenação com template string's.
+* ## Sass
+É um pré-processador CSS que melhora e agiliza o CSS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para instalar, abra o terminal no diretório do projeto, digite `npm install --save-dev sass` e pressionar Enter.
+Para conferir se está instalado, verifique no arquivo `package.json` se terá uma `devDepencies`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    "devDependencies": {
 
-### `npm test`
+        "sass": "^1.55.0",
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        "typescript-plugin-css-modules": "^3.4.0"
+    }
 
-### `npm run build`
+reset.css básico no arquivo index.css
+* ## CSS Modules
+    Solução para não haver sobreposição de código CSS entre componentes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    `typescript-plugin-css-module` é um plugin TypeScript, pode ser encontrado no site da NPM
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Para instalar, abra o terminal no diretório do projeto, digite `npm install -D typescrypt-plugin-css-modules` e execute o comando. Também é obrigátorio adicionar um plugin no arquivo `tsconfig.json`, para que a aplicação funcione corretamente, pois é onde está a configuração de TypeScript. Então copia-se apenas a linha `"plugins:"` fornecida no site da NPM e cole-a dentro do `compilerOptions:`, pois ele já existe no arquivo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+            {
+                "compilerOptions": {
+                    "plugins": [{"name":"typescript-plugin-css-modules"}],
+                    ...
+                }
+            }
 
-### `npm run eject`
+    Com isso terá terminado a instalação e poderá usar o CSS Modules.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    Para utiliza-lo, ao criar arquivos de Sass, crie-os com a extensão `app.modules.scss`. Será importado no `index.tsx`como um objeto. Portanto no topo do código teremos `import style from './app.module.scss'`. O `className` passará a ser uma variável JavaScript `style.app`
+    * ### Padronização do CSS com BEN
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Por utilizar CSS Modules, para gerar classes únicas para cada componente, temos uma maior facilidade em nomea-las, por isso optamos por um estilo simples de nomeação de classes dentro de cada tag. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Autor
+| [<img src="https://github.com/pedromessetti.png" width=115><br><sub>Pedro Vinicius Messetti</sub>](https://github.com/pedromessetti) |
+| :---: |
