@@ -27,7 +27,7 @@ export default function Itens(props: Props) {
   const { busca, filtro, ordenador } = props;
 
   //Função que verifica a busca
-  function testaBusca(title: string) { //Define que o tipo de title é uma string
+  function testaBusca(title: string, description: string) { //Define que o tipo de title é uma string
     const regex = new RegExp(busca, 'i') //Cria uma nova Regular Expression passando o valor da busca e dizendo que é Case Insensitive (Não difere maíusculas de minúsculas)
     return regex.test(title); //Retorna o valor pesquisado se houver
   }
@@ -53,7 +53,7 @@ export default function Itens(props: Props) {
   }
 
   useEffect(() => { //Cria uma nova lista dando um filter no cardapio do arquivo JSON, caso um item do cardapio esteja em alguma das funções (testaBusca ou testaFiltro), ele será setado nesta nova lista
-    const novaLista = cardapio.filter(item => testaBusca(item.title) && testaFiltro(item.category.id));
+    const novaLista = cardapio.filter(item => testaBusca(item.title, item.description) && testaFiltro(item.category.id));
     setLista(ordenar(novaLista)); //Altera o state da lista para o valor ordenado da nova lista
   },[busca, filtro, ordenador]) //Caso algum destes itens se altere, o useEffect será chamado e a lista se altera também
 

@@ -21,6 +21,7 @@ interface Props {
 }
 
 //Cria e exporta o componente do ordenador, indicando que os tipos estão definidos na interface Props
+//Funciona como uma tag select do HTML
 export default function Ordenador({ ordenador, setOrdenador }: Props) {
 
     //Define se o ordenador está aberto ou fechado (o estado inicial é fechado)
