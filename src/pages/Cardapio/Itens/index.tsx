@@ -26,27 +26,32 @@ export default function Itens(props: Props) {
   //Outra forma de fazer a desestruturação de props recebidas
   const { busca, filtro, ordenador } = props;
 
-  //Função que verifica a busca
-  function testaBusca(title: string, description: string) { //Define que o tipo de title é uma string
+  //Arrow function que verifica a busca
+  const testaBusca = (title: string, description: string) => { //Define que o tipo de title é uma string
     const regex = new RegExp(busca, 'i') //Cria uma nova Regular Expression passando o valor da busca e dizendo que é Case Insensitive (Não difere maíusculas de minúsculas)
-    return regex.test(title); //Retorna o valor pesquisado se houver
+    return regex.test(title, description); //Retorna o valor pesquisado se for achado em title ou em description
   }
 
-  //Função que verifica o filtro
-  function testaFiltro(id: number) { //Define que o tipo do id é um number
+  //Arrow function que verifica o filtro
+  const testaFiltro = (id: number) => { //Define que o tipo do id é um number
     if(filtro !== null) return filtro === id //Se o filtro não for null e o valor do filtro é o mesmo do id das categorias então retorna-se true
     return true
+  }
+
+  //Arrow function para ordenar os itens
+  const ordenarPropriedade = (lista: typeof cardapio, propriedade: 'size' | 'serving' |'price') => {
+    return lista.sort((a,b) => (a[propriedade] > b[propriedade] ? 1 : -1))
   }
 
   //Função que realiza a ordenação
   function ordenar(novaLista: typeof cardapio) { //Define que o tipo da novaLista é o mesmo do que o cardapio
     switch(ordenador) { //Troca o retorno da função dependendo valor contido no ordenador
       case 'porcao': //Caso o valor seja porcao
-        return novaLista.sort((a, b) => a.size > b.size ? 1 : -1); //Retorna a novaLista ordenada pelos valores de size definidos no arquivo JSON
+        return ordenarPropriedade(novaLista, 'size') //Retorna a novaLista ordenada pelos valores de size definidos no arquivo JSON
       case 'qtd_pessoas': //Caso o valor seja qtd_pessoas
-        return novaLista.sort((a,b) => a.serving > b.serving ? 1 : -1); //Retorna a novaLista ordenada pelos valores do serving definidos no arquivo JSON
+        return ordenarPropriedade(novaLista, 'serving') //Retorna a novaLista ordenada pelos valores do serving definidos no arquivo JSON
       case 'preco': //Caso o valor seja preco
-        return novaLista.sort((a,b) => a.price > b.price ? 1 : -1); //Retorna a novaLista ordenada pelos valores de price definidos no arquivo JSON
+        return ordenarPropriedade(novaLista, 'price') //Retorna a novaLista ordenada pelos valores de price definidos no arquivo JSON
       default: //Caso seja o valor padrão (Ordenar por)
         return novaLista; //Retorna a novaLista sem nenhuma ordenação
     }
