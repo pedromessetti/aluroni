@@ -62,7 +62,7 @@ export default function Itens(props: Props) {
       {lista.map(item => ( //Itera sobre os itens da lista atual
         <Item 
           key={item.id} 
-          {...item} //Não precisa definir todas as props, desse modo espalha-se as props para serem desestruturadas no componente Item
+          {...item} //Não precisa passar todas as props manualmente, desse modo usamos o spread operator e as props serão desestruturadas no componente Item
         />
       ))}
     </div>

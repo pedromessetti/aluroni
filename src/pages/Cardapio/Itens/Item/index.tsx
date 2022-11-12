@@ -1,9 +1,6 @@
 //Importação dos estilos
 import style from './Item.module.scss'
 
-//Importação da biblioteca classnames
-import classNames from 'classnames'
-
 
 //Interface para tipar as props recebidas
 interface Props {
