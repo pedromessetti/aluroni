@@ -30,7 +30,7 @@ Pacote do React que adiciona ícones para serem usados na aplicação, necessita
 * ## TypeScript
 É uma biblioteca para tipar variáveis em JavaScript. Para criar uma aplicação React utilizando o template padrão de typescript, basta digitar no terminal `npx create-react-app nome-do-app --template typescript`
 * ## Biblioteca Classnames
-Essa biblioteca auxilia na adição condicional de classes CSS, pode-se utilizar sintaxe de objetos para definir quais classes devem ser aplicadas, faz com que seja uma melhor forma de trabalhar com CSS Modules sem precisar fazer a concatenação com template string's.
+Essa biblioteca auxilia na adição condicional de classes CSS, pode-se utilizar sintaxe de objetos para definir quais classes devem ser aplicadas, faz com que seja uma melhor forma de trabalhar com CSS Modules sem precisar fazer a concatenação com template string's. Para instalar basta abrir o terminal e executar o comando `npm install classnames`
 * ## Sass
 É um pré-processador que melhora e agiliza o CSS oferecendo algumas ferramentas que facilitam a escrita, porém os navegadores interpretam apenas CSS portanto o arquivo Sass é compilado para CSS puro.
 
