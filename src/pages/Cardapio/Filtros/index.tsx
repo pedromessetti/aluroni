@@ -28,20 +28,20 @@ export default function Filtros({ filtro, setFiltro }: Props) {
         return setFiltro(opcao.id) //Retorna uma alteração no state de filtro, alterando seu valor para o id da opção selecionada
     }
 
-  return (
-    <div className={style.filtros}>
-        {filtros.map((opcao) => ( //Itera sobre as opções de filtro do arquivo JSON
-            <button 
-                className={classNames({
-                    [style.filtros__filtro]: true,
-                    [style["filtros__filtro--ativo"]]: filtro === opcao.id //Se o id da opção selecionada for igual ao filtro, o CSS receberá esta nova classe
-                })}
-                key={opcao.id}
-                onClick={() => selecionarFiltro(opcao)} //Ao clicar no filtro será chamada a função selecionarFiltro passando como parametro a opção selecionada
-            >
-                {opcao.label}
-            </button>
-        ))}
-    </div>
-  )
+    return (
+        <div className={style.filtros}>
+            {filtros.map((opcao) => ( //Itera sobre as opções de filtro do arquivo JSON
+                <button 
+                    className={classNames({
+                        [style.filtros__filtro]: true,
+                        [style['filtros__filtro--ativo']]: filtro === opcao.id //Se o id da opção selecionada for igual ao filtro, o CSS receberá esta nova classe
+                    })}
+                    key={opcao.id}
+                    onClick={() => selecionarFiltro(opcao)} //Ao clicar no filtro será chamada a função selecionarFiltro passando como parametro a opção selecionada
+                >
+                    {opcao.label}
+                </button>
+            ))}
+        </div>
+    )
 }

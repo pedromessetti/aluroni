@@ -23,8 +23,8 @@ interface Props {
 //Cria e exporta o componente item, indicando que os tipos estão definidos na interface Props
 export default function Item(props: Props) {
 
-  //Outra forma de fazer a desestruturação de props recebidas
-  const { title, description, photo, category, size, serving, price } = props
+    //Outra forma de fazer a desestruturação de props recebidas
+    const { title, description, photo, category, size, serving, price } = props
 
     return (
         <div className={style.item}>

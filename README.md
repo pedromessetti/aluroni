@@ -64,6 +64,8 @@ reset.css básico no arquivo index.css
 
     Por utilizar CSS Modules, para gerar classes únicas para cada componente, temos uma maior facilidade em nomea-las, por isso optamos por um estilo simples de nomeação de classes dentro de cada tag. 
 
+    * ### ESLint
+    
 # Autor
 | [<img src="https://github.com/pedromessetti.png" width=115><br><sub>Pedro Vinicius Messetti</sub>](https://github.com/pedromessetti) |
 | :---: |
