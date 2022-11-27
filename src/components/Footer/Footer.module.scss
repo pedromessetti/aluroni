@@ -1,0 +1,18 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+
+.footer {
+  background-color: $red;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px $padding-horizontal;
+  @media (max-width: $tablet) {
+  padding: 10px $padding-horizontal-mobile;
+  }
+  @media (min-width: $tablet) and (max-width: $desktop_small) {
+  padding: 10px $padding-horizontal-sm;
+  }
+  @media (min-width: $desktop_small) and (max-width: $desktop_md) {
+  padding: 10px $padding-horizontal-md;
+  }
+}

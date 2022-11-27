@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Início",
+    "to": "/"
+  },
+  {
+    "label": "Cardápio",
+    "to": "/cardapio"
+  },
+  {
+    "label": "Sobre",
+    "to": "/sobre"
+  }
+]

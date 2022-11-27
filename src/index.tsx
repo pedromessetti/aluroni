@@ -9,7 +9,7 @@ import 'normalize.css'
 import './index.css'
 
 //Importação dos components
-import Cardapio from './pages/Cardapio'
+import Router from './routes'
 
 
 //Principal variável que vai renderizar toda a aplicação
@@ -18,9 +18,9 @@ const root = ReactDOM.createRoot(
 )
 //Chama o método render(), portanto tudo que estiver dentro será renderizado na página
 root.render(
-    <React.StrictMode>
-        <>
-            <Cardapio />
-        </>
-    </React.StrictMode>
+  <React.StrictMode>
+    <>
+      <Router />
+    </>
+  </React.StrictMode>
 )
