@@ -52,11 +52,7 @@ export default function Itens(props: Props) {
       return novaLista //Retorna a novaLista sem nenhuma ordenação
     }
   }
-<<<<<<< HEAD
-
-=======
   
->>>>>>> e0ca4e4de2d6e65f27bbe5f8781187536baa07a3
   useEffect(() => { //Cria uma nova lista dando um filter no cardapio do arquivo JSON, caso um item do cardapio esteja em alguma das funções (testaBusca ou testaFiltro), ele será setado nesta nova lista
     const novaLista = cardapio.filter(item => testaBusca(item.title) && testaFiltro(item.category.id))
     setLista(ordenar(novaLista)) //Altera o state da lista para o valor ordenado da nova lista
