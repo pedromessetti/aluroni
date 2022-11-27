@@ -1,0 +1,25 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+
+.footer {
+  background-color: $green;
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin: 0 5px;
+  }
+
+
+  &__bottom {
+    background-color: $dark-green;
+    display: flex;
+    justify-content: space-between;
+    color: $soft-green;
+    font-weight: 600;
+    padding: 0 1em;
+  }
+}

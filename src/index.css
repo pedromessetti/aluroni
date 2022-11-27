@@ -1,5 +1,6 @@
 /* Import da fonte principal para todo o código*/
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 /* Regras do Box sizing */
 *,
@@ -11,9 +12,19 @@
 
 /* Set do body padrão */
 body {
-  background-color: #f6f6f6;
+  background-color: #b5b5b5bf;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(87, 85, 85);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #c7c7c7;  /* creates padding around scroll thumb */
 }
 
 /* Imagens mais fáceis de serem trabalhadas */
@@ -31,3 +42,12 @@ select {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+#root > main.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

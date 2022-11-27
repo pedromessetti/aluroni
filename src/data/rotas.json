@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Home",
+    "to": "/"
+  },
+  {
+    "label": "Ementa",
+    "to": "/ementa"
+  },
+  {
+    "label": "Reservas",
+    "to": "/reservas"
+  }
+]
