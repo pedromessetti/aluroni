@@ -6,7 +6,7 @@ import styleTema from 'styles/Tema.module.scss'
 import cardapio from 'data/cardapio.json'
 
 //Importação das imagens
-import casa from 'assets/sobre/casa.png'
+import casa from 'assets/sobre/vista_externa.jpg'
 import nossaCasa from 'assets/nossa_casa.png'
 
 import { Link, useNavigate } from 'react-router-dom'
@@ -28,7 +28,7 @@ export default function Home() {
       <section className={style.nossaCasa}>
         <h3 className={styleTema.titulo}>Nossa casa</h3>
         <div className={style.nossaCasa__container}>
-          <img src={nossaCasa} alt="Casa do Aluroni" />
+          <img src={nossaCasa} alt="Patio Antico imagens" />
           <p>
             O Pátio Antico é um restaurante italiano que oferece um vasto cardápio de pizzas em forno de lenha, massas   frescas produzidas na casa e carnes diversas, para além de uma interessante escolha de entradas, saladas e    sobremesas.
             <br></br> <br></br>
@@ -39,7 +39,7 @@ export default function Home() {
             target='_blank'
             rel="noreferrer"
           >
-            Praça da República, n°6 <br /> <br /> Paço de Arcos
+            Praça da República, n°6 <br /> <br /> Paço de Arcos, Oeiras
           </a>
         </div>
       </section>
@@ -50,7 +50,9 @@ export default function Home() {
           {pratosRecomendados.map((item) => (
             <div key={item.id} className={style.recomendado}>
               <div className={style.recomendado__imagem}>
-                <img src={item.photo} alt={item.title} />
+                <img src={item.photo} alt={item.title} 
+                  onClick={() => redirecionarParaDetalhes(item)}
+                />
               </div>
             </div>
           ))}

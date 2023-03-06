@@ -91,6 +91,7 @@
     margin-bottom: 10px;
 
     img {
+      cursor: pointer;
       border-radius: 8px;
       width: 100%;
     }
@@ -101,6 +102,11 @@
   display: flex;
   gap: 20px;
   margin-bottom: 50px;
+
+  img {
+    width: 30%;
+    height: 30%;
+  }
 
   &__texto {
     display: flex;

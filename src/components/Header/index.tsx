@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={style.header}>
       <Link to='/'>
-        <img src={logo} alt='logo do restaurante' className={style.header__logo}/>
+        <img src={logo} alt='logo Pátio Antico' className={style.header__logo}/>
       </Link>
       <nav className={style.menu}>
         <ul className={style.menu__list}>

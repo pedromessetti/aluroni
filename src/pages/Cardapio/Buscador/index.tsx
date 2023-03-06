@@ -18,7 +18,7 @@ export default function Buscador({ busca, setBusca }: Props) {
       <input 
         value={busca} //Salva o valor da busca
         onChange={(evento) => setBusca(evento.target.value)} //Ao escrever, altera o valor do state busca para o valor digitado
-        placeholder="Buscar"
+        placeholder="O que desejas ?"
       />
       <CgSearch //Ícone de lupa como um componente
         size={20}

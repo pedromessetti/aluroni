@@ -4,15 +4,19 @@
         "id": 1
     },
     {
-        "label": "Carnes",
+        "label": "Pizzas",
         "id": 2
     },
     {
-        "label": "Combos",
+        "label": "Carnes",
         "id": 3
     },
     {
-        "label": "Veganos",
+        "label": "Vegetarianos",
         "id": 4
+    },
+    {
+        "label": "Veganos",
+        "id": 5
     }
 ]

@@ -3,10 +3,17 @@
 
 .footer {
   background-color: $green;
+  
+  h3 {
+    margin-left: 10px;
+  }
 
   p {
+    margin-left: 20px;
     display: flex;
     align-items: center;
+    font-weight: 700;
+    color:$black;
   }
 
   svg {

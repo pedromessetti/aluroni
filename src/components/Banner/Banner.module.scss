@@ -6,28 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-image: url("/assets/header.png");
+  background-image: url("/assets/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   padding: 20px $padding-horizontal;
   box-shadow: inset 0px -50px 50px #c7c7c7;
-
-  @media (max-width:$mobile) {
-    width: fit-content;
-  }
-
-  @media (max-width: $tablet) {
-    padding: 20px $padding-horizontal-mobile;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop_small) {
-    padding: 20px $padding-horizontal-sm;
-  }
-
-  @media (min-width: $desktop_small) and (max-width: $desktop_md) {
-    padding: 20px $padding-horizontal-md;
-  }
   
   &__texto {
     background: $soft-green-transparent;

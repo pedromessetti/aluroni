@@ -1,10 +1,10 @@
 @import 'styles/variaveis';
 @import 'styles/breakpoints';
 
-
 $massas: #d73b3b;
+$pizzas: #000000;
 $carnes: #30201e;
-$combos: #e6c864;
+$vegetarianos: #e6c864;
 $veganos: #80aa40;
 
 .tags {
@@ -45,8 +45,8 @@ $veganos: #80aa40;
             color: white;
         }
 
-        &__combos {
-            background-color: $combos;
+        &__vegetarianos {
+            background-color: $vegetarianos;
         }
 
         &__veganos {
